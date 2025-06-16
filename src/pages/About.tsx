@@ -137,11 +137,11 @@ const About: React.FC = () => {
       <section className="relative py-24 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6 animate-fade-in-up">
-            Về CNM Investment
+            Về CNM Group
           </h1>
-          <p className="text-xl text-primary-100 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Hành trình 15 năm xây dựng và phát triển, khẳng định vị thế hàng đầu 
-            trong lĩnh vực bất động sản tại Việt Nam
+          <p className="text-lg text-primary-100 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            Gồm các thành viên sáng lập có bề dày kinh nghiệm và hiểu biết sâu sác trong lĩnh vực Bất Động sản, am hiểu thị trường,
+            quy trình phát triển dự án và các yếu tố tạo nên giá trị bền vững.
           </p>
         </div>
       </section>
@@ -154,8 +154,8 @@ const About: React.FC = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Giới thiệu về CNM
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                CNM Investment được thành lập vào năm 2009 với sứ mệnh mang đến những sản phẩm 
+              {/* <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                CNM Group được thành lập vào năm 2009 với sứ mệnh mang đến những sản phẩm 
                 bất động sản chất lượng cao, đáp ứng nhu cầu an cư và đầu tư của người Việt Nam.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -163,26 +163,53 @@ const About: React.FC = () => {
                 phục vụ hơn 10,000 khách hàng và nhận được 25+ giải thưởng uy tín trong ngành.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                CNM Investment không chỉ là nhà phát triển bất động sản mà còn là đối tác tin cậy, 
+                CNM Group không chỉ là nhà phát triển bất động sản mà còn là đối tác tin cậy, 
                 đồng hành cùng khách hàng trong hành trình tìm kiếm không gian sống lý tưởng.
+              </p> */}
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               </p>
-              
+              <p className="text-gray-600 mb-3 leading-relaxed">
+                <b className="text-xl">Triết lí hoạt động: </b>
+                <i className="text-base text-yellow-600">Lấy con người làm trung tâm</i>
+              </p> 
+              <ul className="ml-5">
+                <li className="text-gray-600 mb-1">
+                  <span className="font-bold">Tầm nhìn cốt lõi:</span> Đặt con người làm trung tâm trong mọi quyết định và thiết kế
+                </li>
+                <li className="text-gray-600 mb-1">
+                  <span className="font-bold">Mục tiêu sản phẩm:</span> Không chỉ xây dựng các tòa nhà, mà kiến tạo không gian sống thực sự. Mỗi dự án hướng tới việc mang lại “giá trị sống cao” cho cư dân
+                </li>
+                <li className="text-gray-600 mb-1">
+                  <span className="font-bold">Biểu hiện cụ thể:</span> Thiết kế thông minh, tiện ích thiết thực,chất lượng vật liệu, không gian sinh hoạt cộng đồng, môi trường sống an toàn, lành mạnh và gắn kết 
+                </li>
+              </ul>
+            <p className="text-gray-600 mb-3 leading-relaxed">
+                <b className="text-xl">Định hướng chiến lược:  </b>
+                <i className="text-base text-yellow-600">Phát triển bền vững</i>
+              </p> 
+              <ul className="ml-5">
+                <li className="text-gray-600 mb-1">
+                  <span className="font-bold">Cam kết đồng hành:</span> Gắn kết chặt chẽ lấy triết lý “lấy con người làm trung tâm” với các nguyên tắc Phát triển bền vững 
+                </li>
+                <li className="text-gray-600 mb-1">
+                  <span className="font-bold">Trụ cột chính:</span> Bền vững môi trường – Bền vững kinh tế - Bền vững xã hội 
+                </li>
+              </ul>
+              <br></br>
               {/* Vision & Mission */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-primary-50 p-6 rounded-xl">
                   <Eye className="w-8 h-8 text-primary-600 mb-3" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Tầm nhìn</h3>
                   <p className="text-gray-600 text-sm">
-                    Trở thành nhà phát triển bất động sản hàng đầu Việt Nam, 
-                    được khách hàng và đối tác tin tưởng lựa chọn.
+                    Trở thành đơn vị tiên phong trong việc phát triển các Dự án bất động sản “ vì con người, vì tương lai bền vững”
                   </p>
                 </div>
                 <div className="bg-accent-50 p-6 rounded-xl">
                   <Target className="w-8 h-8 text-accent-600 mb-3" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Sứ mệnh</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Cam kết</h3>
                   <p className="text-gray-600 text-sm">
-                    Kiến tạo những không gian sống đẳng cấp, mang lại giá trị bền vững 
-                    cho cộng đồng và xã hội.
+                    Mỗi công trình kết tinh kinh nghiệm vững vàng, triết lý nhân văn và trách nhiệm với môi trường – xã hội, hướng đến giá trị sống bền vững.
                   </p>
                 </div>
               </div>
@@ -204,7 +231,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Thành tựu nổi bật</h2>
-            <p className="text-xl text-gray-600">Những con số ấn tượng sau 15 năm phát triển</p>
+            <p className="text-xl text-gray-600">Những con số ấn tượng sau 1 năm phát triển</p>
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -345,7 +372,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Organizational Structure */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Cơ cấu tổ chức</h2>
@@ -386,7 +413,7 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Values */}
       <section className="py-20 bg-primary-600">

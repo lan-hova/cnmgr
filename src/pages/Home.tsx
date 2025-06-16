@@ -48,7 +48,7 @@ const Home: React.FC = () => {
     {
       id: 3,
       title: 'CNM nhận giải thưởng "Nhà phát triển BĐS tốt nhất"',
-      excerpt: 'Công ty CNM Investment vinh dự nhận giải thưởng danh giá từ Hiệp hội BĐS Việt Nam...',
+      excerpt: 'Công ty CNM Group vinh dự nhận giải thưởng danh giá từ Hiệp hội BĐS Việt Nam...',
       date: '05/03/2024',
       image: 'https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            CNM Investment
+            CNM Group
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Kiến tạo không gian sống đẳng cấp, kiến tạo tương lai thịnh vượng
@@ -120,10 +120,10 @@ const Home: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Về CNM Investment
+                Về CNM Group
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Với hơn 15 năm kinh nghiệm trong lĩnh vực bất động sản, CNM Investment 
+                Với hơn 15 năm kinh nghiệm trong lĩnh vực bất động sản, CNM Group 
                 đã khẳng định vị thế là một trong những nhà phát triển bất động sản hàng đầu tại Việt Nam.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
