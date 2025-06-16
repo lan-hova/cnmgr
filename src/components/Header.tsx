@@ -59,7 +59,7 @@ const Header: React.FC = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-primary-900">CNM</h1>
-                <p className="text-xs text-gray-600 -mt-1">Group</p>
+                <p className="text-xs text-gray-600 -mt-1">&nbsp;G R O U P</p>
               </div>
             </Link>
 
