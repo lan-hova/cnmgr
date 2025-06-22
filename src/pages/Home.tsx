@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Building, Award, ChevronRight } from 'lucide-react';
+import bg from '/src/img/cnmbg.png';
 
 const Home: React.FC = () => {
   const projects = [
@@ -68,13 +69,13 @@ const Home: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=1200)'
+            backgroundImage: `url(${bg})`,
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center text-lime-300 px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
             CNM Group
           </h1>
@@ -100,7 +101,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      {/* <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -112,10 +113,10 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-yellow-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
@@ -123,8 +124,8 @@ const Home: React.FC = () => {
                 Về CNM Group
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Với hơn 15 năm kinh nghiệm trong lĩnh vực bất động sản, CNM Group 
-                đã khẳng định vị thế là một trong những nhà phát triển bất động sản hàng đầu tại Việt Nam.
+                Với các thành viên sáng lập có bề dày kinh nghiệm và hiểu biết sâu sác trong lĩnh vực Bất Động sản, am hiểu thị trường,
+                quy trình phát triển dự án và các yếu tố tạo nên giá trị bền vững.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Chúng tôi cam kết mang đến những sản phẩm chất lượng cao, thiết kế hiện đại 
@@ -142,7 +143,7 @@ const Home: React.FC = () => {
               <img 
                 src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="CNM Building"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-s-full shadow-2xl"
               />
             </div>
           </div>
@@ -150,7 +151,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20">
+      <section className="py-20 bg-cyan-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Dự án nổi bật</h2>
@@ -211,7 +212,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Latest News */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-lime-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Tin tức mới nhất</h2>
@@ -277,10 +278,10 @@ const Home: React.FC = () => {
               Đăng ký tư vấn
             </Link>
             <a 
-              href="tel:0123456789"
+              href="tel:02462583535"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
             >
-              Gọi ngay: 0123 456 789
+              Gọi ngay: 024 6258 3535
             </a>
           </div>
         </div>

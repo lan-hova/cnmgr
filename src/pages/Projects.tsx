@@ -92,10 +92,10 @@ const Projects: React.FC = () => {
 
   const filterOptions = [
     { value: 'all', label: 'Tất cả dự án' },
-    { value: 'apartment', label: 'Căn hộ' },
-    { value: 'villa', label: 'Biệt thự' },
+    { value: 'apartment', label: 'An sinh xã hội' },
+    // { value: 'villa', label: 'Biệt thự' },
     { value: 'commercial', label: 'Thương mại' },
-    { value: 'resort', label: 'Resort' }
+    // { value: 'resort', label: 'Resort' }
   ];
 
   return (
@@ -107,7 +107,7 @@ const Projects: React.FC = () => {
             Dự án của chúng tôi
           </h1>
           <p className="text-xl text-primary-100 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Khám phá danh mục dự án đa dạng và chất lượng từ Điện Biên Investment
+            Khám phá danh mục dự án đa dạng và chất lượng từ CNM Group
           </p>
         </div>
       </section>
@@ -241,10 +241,10 @@ const Projects: React.FC = () => {
               Đăng ký tư vấn
             </Link>
             <a 
-              href="tel:0123456789"
+              href="tel:02462583535"
               className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
             >
-              Gọi ngay: 0123 456 789
+              Gọi ngay: 024 6258 3535
             </a>
           </div>
         </div>

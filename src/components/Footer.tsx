@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">CNM</h3>
-                <p className="text-sm text-gray-400">Investment</p>
+                <p className="text-sm text-gray-400">G R O U P</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -79,16 +79,16 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent-500 mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-gray-300">
-                  123 Đường Võ Chí Công, Quận 1, TP. Hồ Chí Minh
+                  Số 2, ngõ 18/61, phố Định Công Thượng, Phường Định Công, Quận Hoàng Mai, Thành phố Hà Nội
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent-500" />
-                <p className="text-sm text-gray-300">0123 456 789</p>
+                <p className="text-sm text-gray-300">+84 24 6258 3535</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent-500" />
-                <p className="text-sm text-gray-300">info@cnm.vn</p>
+                <p className="text-sm text-gray-300">congtycptapdoancnm@gmail.com</p>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 CNM Investment. Tất cả quyền được bảo lưu.
+            © 2025 CNM GROUP. Tất cả quyền được bảo lưu.
           </p>
         </div>
       </div>
