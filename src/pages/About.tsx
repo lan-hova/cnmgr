@@ -426,7 +426,7 @@ const About: React.FC = () => {
       </section> */}
 
       {/* Core Values */}
-      <section className="py-20 bg-primary-600">
+      <section className="py-20 bg-sky-600">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Giá trị cốt lõi</h2>

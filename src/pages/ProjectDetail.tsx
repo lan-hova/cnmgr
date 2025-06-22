@@ -8,32 +8,32 @@ const ProjectDetail: React.FC = () => {
   // Mock data - in real app, fetch from API
   const project = {
     id: Number(id),
-    name: 'Điện Biên Victoria',
-    location: 'Quận 9, TP.HCM',
-    address: '123 Đường Võ Chí Công, Phường Tân Phú, Quận 9, TP.HCM',
-    price: '2.5 - 4.2 tỷ',
-    area: '70 - 120 m²',
-    status: 'Đang mở bán',
+    name: 'Nestia - Điện Biên',
+    location: 'Tỉnh Lào Cai',
+    address: 'Phường Lào Cai, Tỉnh Lào Cai',
+    price: 'Nestia - Điện Biên',
+    area: '5.614,5 m²',
+    status: 'Đang triển khai',
     completion: '2024',
-    developer: 'Điện Biên Investment',
+    developer: 'CNM Group',
     images: [
       'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200',
       'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200',
       'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=1200',
       'https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
-    description: `Điện Biên Victoria là dự án căn hộ cao cấp mới nhất của Điện Biên Investment, 
-    tọa lạc tại vị trí đắc địa Quận 9, TP.HCM. Dự án được thiết kế theo phong cách hiện đại, 
-    kết hợp hài hòa giữa không gian sống tiện nghi và môi trường xanh thân thiện.`,
+    description: `Nestia – Điện Biên là dự án nhà ở xã hội được phát triển với triết lý nhân văn sâu sắc: 
+    mỗi người dân Việt đều xứng đáng có một tổ ấm chất lượng, bền vững và chan hòa yêu thương.
+    Không chỉ đơn thuần là nơi ở, Nestia – Điện Biên là không gian sống lý tưởng được thiết kế 
+    để nuôi dưỡng hạnh phúc gia đình, sự gắn kết cộng đồng và những giá trị sống tốt đẹp.`,
     features: [
-      'Hồ bơi vô cực tại tầng thượng',
-      'Phòng gym hiện đại đầy đủ trang thiết bị',
-      'Khu vui chơi trẻ em an toàn',
+      'Sân vườn cảnh quan',
+      'Sân chơi trẻ em',
+      'Khu tập gym ngoài trời',
       'Hệ thống bảo vệ 24/7',
-      'Bãi đỗ xe thông minh',
-      'Khu BBQ và tiệc ngoài trời',
-      'Công viên cây xanh nội khu',
-      'Hệ thống điều hòa trung tâm'
+      'Bãi gửi xe rộng rãi',
+      'Tiện ích mua sắm',
+      'Trạm sạc xe điện',
     ],
     floorPlans: [
       { type: '2PN', area: '70m²', price: '2.5 tỷ', available: 15 },
@@ -41,10 +41,14 @@ const ProjectDetail: React.FC = () => {
       { type: '3PN+', area: '120m²', price: '4.2 tỷ', available: 8 }
     ],
     nearby: [
-      { name: 'Lotte Mart Quận 9', distance: '500m', type: 'Siêu thị' },
-      { name: 'Bệnh viện Quận 9', distance: '800m', type: 'Y tế' },
-      { name: 'Trường THPT Lê Quý Đôn', distance: '1.2km', type: 'Giáo dục' },
-      { name: 'Công viên phần mềm Quang Trung', distance: '2km', type: 'Công nghệ' }
+      { name: 'Công viên Nhạc Sơn', distance: '400m', type: 'Giải trí' },
+      { name: 'Quảng trường trung tâm TP. Lào Cai', distance: '1.4km', type: 'Giải trí' },
+      { name: 'Phố đi bộ', distance: '1km', type: 'Giải trí' },
+      { name: 'Trường tiểu học Nguyễn Bá Ngọc', distance: '200m', type: 'Giáo dục' },
+      { name: 'Cụm liên trường Kim Tân', distance: '1km', type: 'Giáo dục' },
+      { name: 'Cửa khẩu Quốc tế Lào Cai và Cửa khẩu Kim Thành', distance: '3km', type: 'Giao thông' },
+      { name: 'Bệnh viện thành phố', distance: '500m', type: 'Y tế' },
+      { name: 'Cầu Cốc Lếu', distance: '1.9km', type: 'Giao thông' }
     ]
   };
 
@@ -155,7 +159,7 @@ const ProjectDetail: React.FC = () => {
               </div>
 
               <div className="border-t pt-6 mb-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Mô tả dự án</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Tổng quan</h3>
                 <p className="text-gray-600 leading-relaxed">{project.description}</p>
               </div>
 
@@ -171,7 +175,7 @@ const ProjectDetail: React.FC = () => {
                 </div>
               </div>
 
-              <div className="border-t pt-6">
+              {/* <div className="border-t pt-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Mặt bằng & Giá bán</h3>
                 <div className="space-y-4">
                   {project.floorPlans.map((plan, index) => (
@@ -189,7 +193,7 @@ const ProjectDetail: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Nearby Facilities */}
@@ -215,7 +219,7 @@ const ProjectDetail: React.FC = () => {
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="text-center mb-6">
                   <div className="text-3xl font-bold text-primary-600 mb-2">{project.price}</div>
-                  <div className="text-gray-600">VNĐ</div>
+                  <div className="text-gray-600"></div>
                 </div>
 
                 <form action="https://formsubmit.co/congtycptapdoancnm@gmail.com" method="POST" className="space-y-4">
@@ -287,18 +291,18 @@ const ProjectDetail: React.FC = () => {
                   <div className="text-center space-y-3">
                     <div className="text-sm text-gray-600">Hoặc liên hệ trực tiếp</div>
                     <a 
-                      href="tel:0123456789"
+                      href="tel:02462583535"
                       className="flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-white py-3 rounded-lg font-semibold transition-colors"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      0123 456 789
+                      0246 258 3535
                     </a>
                     <a 
-                      href="mailto:info@vanphu.vn"
+                      href="mailto:congtycptapdoancnm@gmail.com"
                       className="flex items-center justify-center border border-gray-300 hover:border-primary-600 text-gray-700 hover:text-primary-600 py-3 rounded-lg font-semibold transition-colors"
                     >
                       <Mail className="w-5 h-5 mr-2" />
-                      info@vanphu.vn
+                      congtycptapdoancnm@gmail.com
                     </a>
                   </div>
                 </div>

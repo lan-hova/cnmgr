@@ -8,16 +8,16 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      name: 'Điện Biên Victoria',
-      location: 'Quận 9, TP.HCM',
+      name: 'Nestia - Điện Biên',
+      location: 'Tỉnh Lào Cai',
       price: '2.5 - 4.2 tỷ',
-      area: '70 - 120 m²',
-      status: 'Đang mở bán',
-      type: 'apartment',
+      area: '5.614,5 m²',
+      status: 'Đang triển khai',
+      type: 'Nhà ở xã hội',
       image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Căn hộ cao cấp với thiết kế hiện đại, tiện ích đầy đủ và vị trí đắc địa.',
-      completion: '2024',
-      features: ['Hồ bơi', 'Gym', 'Parking', 'Security 24/7']
+      description: 'Khu nhà ở với thiết kế hiện đại, tiện ích đầy đủ và vị trí đắc địa.',
+      completion: '2025',
+      features: ['Siêu thị mini', 'Nhà hàng', 'Quán cafe', 'Security 24/7']
     },
     {
       id: 2,
@@ -205,10 +205,10 @@ const Projects: React.FC = () => {
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <div>
+                    {/* <div>
                       <div className="text-2xl font-bold text-primary-600">{project.price}</div>
                       <div className="text-xs text-gray-500">VNĐ</div>
-                    </div>
+                    </div> */}
                     <Link 
                       to={`/projects/${project.id}`}
                       className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium flex items-center transition-colors"
