@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Phone, Mail, MapPin, Facebook, Youtube, Instagram } from 'lucide-react';
+import logo from '/src/img/logocnm.png';
 
 const Footer: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="bg-slate-100 p-1 rounded-md">
-                <img src="/src/img/logocnm.png" alt="Logo" className="w-24 h-12" />
+                <img src={logo} alt="Logo" className="w-24 h-12" />
               </div>
               {/* <div>
                 <h3 className="text-xl font-bold">CNM</h3>

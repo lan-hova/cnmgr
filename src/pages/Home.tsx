@@ -2,22 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Building, Award, ChevronRight } from 'lucide-react';
 import bg from '/src/img/cnmbg.png';
+import nest2 from '/src/img/nestia2.jpg'; // Adjust the path as necessary
 
 const Home: React.FC = () => {
   const projects = [
     {
       id: 1,
-      name: 'CNM Victoria',
-      location: 'Quận 9, TP.HCM',
-      price: '2.5 - 4.2 tỷ',
-      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'Đang mở bán'
+      name: 'Nestia - Điện Biên',
+      location: 'Tỉnh Lào Cai',
+      price: '5.614,5 m²',
+      image: nest2,
+      status: 'Đang triển khai'
     },
     {
       id: 2,
       name: 'CNM Riverside',
       location: 'Quận 7, TP.HCM',
-      price: '3.8 - 6.5 tỷ',
+      price: '5.000 m²',
       image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600',
       status: 'Sắp mở bán'
     },
@@ -25,7 +26,7 @@ const Home: React.FC = () => {
       id: 3,
       name: 'CNM Garden',
       location: 'Quận 2, TP.HCM',
-      price: '4.2 - 7.8 tỷ',
+      price: '3.000 m²',
       image: 'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600',
       status: 'Đang mở bán'
     }

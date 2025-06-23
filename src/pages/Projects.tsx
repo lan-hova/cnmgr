@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Building2, Calendar, Star } from 'lucide-react';
-import ne1 from '/src/img/nestia1.jpg'; // Adjust the path as necessary
+import nest2 from '/src/img/nestia2.jpg';
+
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('all');
@@ -15,7 +16,7 @@ const Projects: React.FC = () => {
       area: '5.614,5 m²',
       status: 'Đang triển khai',
       type: 'Nhà ở xã hội',
-      image: '/src/img/nestia2.jpg',
+      image: nest2,
       description: 'Khu nhà ở với thiết kế hiện đại, tiện ích đầy đủ và vị trí đắc địa.',
       completion: '2025',
       features: ['Siêu thị mini', 'Nhà hàng', 'Quán cafe', 'Security 24/7']

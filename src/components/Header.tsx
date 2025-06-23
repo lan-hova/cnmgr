@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Building2, Phone, Mail } from 'lucide-react';
+import logo from '/src/img/logocnm.png'; // Adjust the path as necessary
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,7 +56,7 @@ const Header: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <div className="bg-white">
-                <img src="/src/img/logocnm.png" alt="Logo" className="w-36 h-18" />
+                <img src={logo} alt="Logo" className="w-36 h-18" />
               </div>
               {/* <div>
                 <h1 className="text-2xl font-bold text-primary-900">CNM</h1>

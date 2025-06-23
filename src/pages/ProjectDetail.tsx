@@ -1,6 +1,13 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { MapPin, Building2, Calendar, Star, Phone, Mail, ArrowLeft, ArrowRight } from 'lucide-react';
+import nest1 from '/src/img/nestia1.jpg';
+import nest2 from '/src/img/nestia2.jpg';
+import nest3 from '/src/img/nestia3.jpg';
+import nest4 from '/src/img/nestia4.jpg';
+import nest5 from '/src/img/nestia5.jpg';
+import nest6 from '/src/img/nestia6.jpg';
+import nest7 from '/src/img/nestia7.jpg';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
@@ -17,13 +24,13 @@ const ProjectDetail: React.FC = () => {
     completion: '2026',
     developer: 'CNM Group',
     images: [
-      '/src/img/nestia1.jpg',
-      '/src/img/nestia2.jpg',
-      '/src/img/nestia3.jpg',
-      '/src/img/nestia4.jpg',
-      '/src/img/nestia5.jpg',
-      '/src/img/nestia6.jpg',
-      '/src/img/nestia7.jpg',
+      nest1,
+      nest2,
+      nest3,
+      nest4,
+      nest5,
+      nest6,
+      nest7,
     ],
     description: `Nestia – Điện Biên là dự án nhà ở xã hội được phát triển với triết lý nhân văn sâu sắc: 
     mỗi người dân Việt đều xứng đáng có một tổ ấm chất lượng, bền vững và chan hòa yêu thương.
