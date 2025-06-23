@@ -51,16 +51,16 @@ const Header: React.FC = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
       }`}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-2">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-primary-600 p-2 rounded-lg">
-                <Building2 className="w-8 h-8 text-white" />
+              <div className="bg-white">
+                <img src="/src/img/logocnm.png" alt="Logo" className="w-36 h-18" />
               </div>
-              <div>
+              {/* <div>
                 <h1 className="text-2xl font-bold text-primary-900">CNM</h1>
                 <p className="text-xs text-gray-600 -mt-1">&nbsp;G R O U P</p>
-              </div>
+              </div> */}
             </Link>
 
             {/* Desktop Navigation */}

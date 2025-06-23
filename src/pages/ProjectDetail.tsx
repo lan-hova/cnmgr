@@ -14,13 +14,16 @@ const ProjectDetail: React.FC = () => {
     price: 'Nestia - Điện Biên',
     area: '5.614,5 m²',
     status: 'Đang triển khai',
-    completion: '2024',
+    completion: '2026',
     developer: 'CNM Group',
     images: [
-      'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      '/src/img/nestia1.jpg',
+      '/src/img/nestia2.jpg',
+      '/src/img/nestia3.jpg',
+      '/src/img/nestia4.jpg',
+      '/src/img/nestia5.jpg',
+      '/src/img/nestia6.jpg',
+      '/src/img/nestia7.jpg',
     ],
     description: `Nestia – Điện Biên là dự án nhà ở xã hội được phát triển với triết lý nhân văn sâu sắc: 
     mỗi người dân Việt đều xứng đáng có một tổ ấm chất lượng, bền vững và chan hòa yêu thương.
@@ -84,7 +87,7 @@ const ProjectDetail: React.FC = () => {
           <div className="lg:col-span-2">
             {/* Image Gallery */}
             <div className="relative mb-8">
-              <div className="relative h-96 rounded-2xl overflow-hidden">
+              <div className="relative h-auto rounded-2xl overflow-hidden">
                 <img 
                   src={project.images[currentImageIndex]} 
                   alt={project.name}
@@ -105,7 +108,7 @@ const ProjectDetail: React.FC = () => {
               </div>
               
               {/* Thumbnail Gallery */}
-              <div className="grid grid-cols-4 gap-2 mt-4">
+              <div className="grid grid-cols-7 gap-2 mt-4">
                 {project.images.map((image, index) => (
                   <button
                     key={index}

@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="bg-primary-600 p-2 rounded-lg">
-                <Building2 className="w-6 h-6 text-white" />
+              <div className="bg-slate-100 p-1 rounded-md">
+                <img src="/src/img/logocnm.png" alt="Logo" className="w-24 h-12" />
               </div>
-              <div>
+              {/* <div>
                 <h3 className="text-xl font-bold">CNM</h3>
                 <p className="text-sm text-gray-400">G R O U P</p>
-              </div>
+              </div> */}
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Công ty hàng đầu trong lĩnh vực phát triển bất động sản tại Việt Nam, 
