@@ -335,7 +335,7 @@ const About: React.FC = () => {
       </section> */}
 
       {/* Leadership Team */}
-      <section className="py-20 bg-sky-50">
+      {/* <section className="py-20 bg-sky-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Ban lãnh đạo</h2>
@@ -379,7 +379,7 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Organizational Structure */}
       {/* <section className="py-20 bg-white">

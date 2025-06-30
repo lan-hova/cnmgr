@@ -5,18 +5,22 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import ProjectDetail from './pages/ProjectDetail';
+import Pd from './pages/pd';
 import News from './pages/News';
 import NewsDetail from './pages/NewsDetail';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import ProjectDetail from './pages/ProjectDetail';
+import { useHeader } from './components/HeaderContext';
 
 function App() {
+  const { hideHeader } = useHeader();
+  
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-white">
-        <Header />
+        {!hideHeader && <Header/>}
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
