@@ -138,6 +138,14 @@ const About: React.FC = () => {
     { number: '', label: 'Xây dựng mối quan hệ bền vững và đáng tin cậy, nơi mỗi ngôi nhà khởi đầu cho hành trình hạnh phúc và phát triển.', icon: Award }
   ];
 
+  const companies = [
+    "Công ty TNHH Bất Động Sản Điện Biên – Invest",
+    "Công ty TNHH Đầu Tư Thụy Khuê Thăng Long", 
+    "Công ty TNHH Bất Động Sản Ngọc Hà West Lake",
+    "Công ty TNHH Đầu Tư OQH",
+    "Công ty TNHH Đầu Tư Bất Động Sản Đại Lộc – Đường Hào"
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -450,6 +458,65 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <div className="mx-0 px-0 py-12"
+        style={{
+                  backgroundImage: `url('https://images.pexels.com/photos/1704120/pexels-photo-1704120.jpeg?auto=compress&cs=tinysrgb&w=1200')`,
+                  backgroundColor: "rgba(255,255,255,0.85)",
+                  backgroundBlendMode: "lighten",
+                  }}>
+        {/* background công ty thành viên */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <div className="p-4 bg-blue-600 rounded-full mr-4">
+              <Building2 className="w-8 h-8 text-white" />
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900">
+              Các công ty thành viên của <span className="text-blue-600">CNM Group</span>
+            </h1>
+          </div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Mạng lưới công ty thành viên của chúng tôi
+          </p>
+        </div>
+
+        {/* Company List */}
+        <div className="max-w-4xl mx-auto">
+          {/* <div className="rounded-2xl shadow-lg border border-gray-100 overflow-hidden"> */}
+            <div className="p-8">
+              <div className="flex items-center mb-6">
+                <Star className="w-6 h-6 text-amber-500 mr-3" />
+                <h2 className="text-2xl font-semibold text-gray-800">
+                  {companies.length} Công ty thành viên
+                </h2>
+              </div>
+              
+              <div className="space-y-0">
+                {companies.map((company, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center py-3 px-4 rounded-lg hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+                  >
+                    <div className="flex items-center justify-center w-6 h-6 mr-4">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full group-hover:bg-blue-700 group-hover:scale-125 transition-all duration-200"></div>
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h3 className="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                        {company}
+                      </h3>
+                    </div>
+                    
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <Building2 className="w-5 h-5 text-blue-500" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          {/* </div> */}
+        </div>
+      </div>
 
       {/* Contact Information */}
       <section className="py-20 bg-gray-50">

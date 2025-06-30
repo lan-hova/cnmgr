@@ -196,7 +196,7 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
         className={`sticky top-0 z-50 pt-4 bg-blue-50 shadow-md transition-all duration-300 ${
           isHeaderSticky
             ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full"
+            : "hidden opacity-0 -translate-y-full"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4">
@@ -355,7 +355,7 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
 
               <section
                 id="ground"
-                className="bg-emerald-50 min-h-screen rounded-2xl shadow-lg mb-8 p-8"
+                className="bg-emerald-50 rounded-2xl shadow-lg mb-8 p-8"
                 style={{
                   backgroundImage: `url('https://images.pexels.com/photos/268917/pexels-photo-268917.jpeg?auto=compress&cs=tinysrgb&w=1200')`,
                   backgroundColor: "rgba(255,255,255,0.85)",
