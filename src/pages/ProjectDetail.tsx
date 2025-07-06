@@ -9,7 +9,9 @@ import nest5 from '/src/img/nestia5.jpg';
 import nest6 from '/src/img/nestia6.jpg';
 import nest7 from '/src/img/nestia7.jpg';
 import { useHeader } from '../components/HeaderContext';
-
+import { Apartment } from '../types/Apartment';
+import ApartmentCard from '../components/ApartmentCard';
+import ImageGallery from '../components/ImageGallery';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
@@ -18,6 +20,8 @@ const ProjectDetail: React.FC = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
+  const [selectedApartment, setSelectedApartment] = useState<Apartment | null>(null);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   
   // Mock data - in real app, fetch from API
   const project = {
@@ -108,10 +112,89 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
   },
   ]
 
+  const apartments: Apartment[] = [
+  {
+    id: '1',
+    title: '03 PN 91,5 m2',
+    area: '91.5',
+    images: [
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: 'Căn hộ 3 phòng ngủ rộng rãi với thiết kế hiện đại'
+  },
+  {
+    id: '2',
+    title: '02 PN 71,5m2 - 72m2',
+    area: '71.5 - 72',
+    images: [
+      'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1648771/pexels-photo-1648771.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: 'Căn hộ 2 phòng ngủ tối ưu không gian sống'
+  },
+  {
+    id: '3',
+    title: '03 PN 95,1 m2 - 96,7 m2',
+    area: '95.1 - 96.7',
+    images: [
+      'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029715/pexels-photo-2029715.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029719/pexels-photo-2029719.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    ],
+    description: 'Căn hộ 3 phòng ngủ cao cấp với view tuyệt đẹp'
+  },
+  {
+    id: '4',
+    title: '02 PN - 75,1 m2 - 75,8 m2',
+    area: '75.1 - 75.8',
+    images: [
+      'https://images.pexels.com/photos/2029721/pexels-photo-2029721.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029715/pexels-photo-2029715.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029719/pexels-photo-2029719.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029734/pexels-photo-2029734.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029717/pexels-photo-2029717.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: 'Căn hộ 2 phòng ngủ thiết kế thông minh'
+  },
+  {
+    id: '5',
+    title: '02 PN 76,5 m2 - 76,7 m2',
+    area: '76.5 - 76.7',
+    images: [
+      'https://images.pexels.com/photos/2082090/pexels-photo-2082090.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2082095/pexels-photo-2082095.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2082085/pexels-photo-2082085.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: 'Căn hộ 2 phòng ngủ hiện đại, tiện nghi'
+  },
+  {
+    id: '6',
+    title: '02PN 53,7 m2 - 53,9 m2',
+    area: '53.7 - 53.9',
+    images: [
+      'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1457845/pexels-photo-1457845.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1457844/pexels-photo-1457844.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1457851/pexels-photo-1457851.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: 'Căn hộ 2 phòng ngủ nhỏ gọn, phù hợp gia đình trẻ'
+  }
+];
+
   const sections = [
     { id: 'overview', label: 'Tổng quan' },
     { id: 'amenities', label: 'Tiện ích' },
-    { id: 'ground', label: 'Mặt bằng' },
+    { id: 'ground', label: 'Sản phẩm' },
     { id: 'location', label: 'Vị trí' },    
   
   ];
@@ -168,6 +251,16 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
         });
       }
     };
+
+    const handleApartmentClick = (apartment: Apartment) => {
+    setSelectedApartment(apartment);
+    setIsGalleryOpen(true);
+  };
+
+  const handleCloseGallery = () => {
+    setIsGalleryOpen(false);
+    setSelectedApartment(null);
+  };
 
   return (
     <div className="bg-blue-50">
@@ -311,10 +404,10 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
               {/* Overview Section */}
               <section
                 id="overview"
-                className="bg-yellow-50 rounded-2xl shadow-lg mb-8 p-8"
+                className="rounded-2xl shadow-lg mb-8 p-8"
                 style={{
-                  backgroundImage: `url('https://images.pexels.com/photos/1704120/pexels-photo-1704120.jpeg?auto=compress&cs=tinysrgb&w=1200')`,
-                  backgroundColor: "rgba(255,255,255,0.9)",
+                  backgroundImage: `url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1200')`,
+                  backgroundColor: "rgba(255,255,255,0.85)",
                   backgroundBlendMode: "lighten",
                 }}
               >
@@ -333,8 +426,8 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                 id="amenities"
                 className="bg-emerald-50 rounded-2xl shadow-lg mb-8 p-8"
                 style={{
-                  backgroundImage: `url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1200')`,
-                  backgroundColor: "rgba(255,255,255,0.75)",
+                  backgroundImage: `url('https://images.pexels.com/photos/1704120/pexels-photo-1704120.jpeg?auto=compress&cs=tinysrgb&w=1200')`,
+                  backgroundColor: "rgba(255,255,255,0.85)",
                   backgroundBlendMode: "lighten",
                 }}
               >
@@ -352,7 +445,8 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                   </div>
                 </div>
               </section>
-
+ 
+              {/* Product Section */}
               <section
                 id="ground"
                 className="bg-emerald-50 rounded-2xl shadow-lg mb-8 p-8"
@@ -406,6 +500,71 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                   </p>
                   {/* </div> */}
                 </div>
+              </section>
+
+              {/* Apartment Models Section */}
+              <section className="py-16 px-4 bg-gradient-to-br from-stone-50 to-amber-50 min-h-screen">
+                <div className="max-w-6xl mx-auto">
+                  {/* Header */}
+                  {/* <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                      CĂN HỘ MẪU
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                      Khám phá các mẫu căn hộ đa dạng với thiết kế hiện đại,
+                      không gian sống tối ưu cho mọi nhu cầu của gia đình
+                    </p>
+                  </div> */}
+
+                  {/* Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {apartments.map((apartment) => (
+                      <ApartmentCard
+                        key={apartment.id}
+                        apartment={apartment}
+                        onClick={() => handleApartmentClick(apartment)}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Additional Info */}
+                  <div className="mt-16 text-center">
+                    <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
+                      {/* <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                        Tham quan căn hộ mẫu
+                      </h3> */}
+                      <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+                        Nhấn vào từng mẫu căn hộ để xem thư viện ảnh chi tiết.
+                        Mỗi căn hộ được thiết kế với sự tỉ mỉ, tối ưu hóa không
+                        gian sống và mang đến trải nghiệm sống hiện đại, tiện
+                        nghi.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                        <span className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                          Thiết kế hiện đại
+                        </span>
+                        <span className="flex items-center">
+                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                          Không gian tối ưu
+                        </span>
+                        <span className="flex items-center">
+                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span>
+                          Nội thất cao cấp
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Gallery Modal */}
+                {selectedApartment && (
+                  <ImageGallery
+                    apartment={selectedApartment}
+                    isOpen={isGalleryOpen}
+                    onClose={handleCloseGallery}
+                  />
+                )}
               </section>
 
               {/* Nearby Facilities */}
@@ -706,11 +865,13 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                     Đăng ký tư vấn
                   </button>
                   <a
-                    href="/logocnm.ico"
-                    download="CNM-Brochure.ico"
+                    href="/Phaply_DienBieninvest.pdf"
+                    //download="CNM-Brochure.ico"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
                   >
-                    Tải brochure
+                    Pháp lý dự án
                   </a>
                 </div>
               </div>

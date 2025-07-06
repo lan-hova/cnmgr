@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Building, Award, ChevronRight } from 'lucide-react';
-import bg from '/src/img/cnmbg.png';
+import bg from '/src/img/bgcnm.png';
 import nest2 from '/src/img/nestia2.jpg'; // Adjust the path as necessary
 
 const Home: React.FC = () => {
@@ -67,31 +67,40 @@ const Home: React.FC = () => {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${bg})`,
-          }}
+          style={{backgroundImage: `url(${bg})`,}}
         >
           <div className="absolute inset-0 bg-black/50"></div>
+          
         </div>
-        
-        <div className="relative z-10 text-center text-lime-300 px-4 max-w-4xl mx-auto">
+        {/* <div className="absolute inset-0 bg-black/50 opacity-75">
+        <video className="absolute w-full h-screen inset-0 object-cover -z-10" autoPlay muted loop id="video-background">
+            <source src={bg} type="video/mp4" />
+          </video>
+          </div> */}
+        <div className="relative z-10 text-center text-yellow-500 px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
             CNM Group
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p
+            className="text-xl text-orange-500 md:text-2xl mb-8 opacity-100 animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             Kiến tạo không gian sống đẳng cấp, kiến tạo tương lai thịnh vượng
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <Link 
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <Link
               to="/projects"
               className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center transition-all transform hover:scale-105"
             >
               Khám phá dự án
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
+            <Link
               to="/contact"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold transition-all"
             >
@@ -125,14 +134,16 @@ const Home: React.FC = () => {
                 Về CNM Group
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Với các thành viên sáng lập có bề dày kinh nghiệm và hiểu biết sâu sác trong lĩnh vực Bất Động sản, am hiểu thị trường,
-                quy trình phát triển dự án và các yếu tố tạo nên giá trị bền vững.
+                Với các thành viên sáng lập có bề dày kinh nghiệm và hiểu biết
+                sâu sác trong lĩnh vực Bất Động sản, am hiểu thị trường, quy
+                trình phát triển dự án và các yếu tố tạo nên giá trị bền vững.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Chúng tôi cam kết mang đến những sản phẩm chất lượng cao, thiết kế hiện đại 
-                và dịch vụ chuyên nghiệp, tạo nên những không gian sống đẳng cấp cho khách hàng.
+                Chúng tôi cam kết mang đến những sản phẩm chất lượng cao, thiết
+                kế hiện đại và dịch vụ chuyên nghiệp, tạo nên những không gian
+                sống đẳng cấp cho khách hàng.
               </p>
-              <Link 
+              <Link
                 to="/about"
                 className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
               >
@@ -141,7 +152,7 @@ const Home: React.FC = () => {
               </Link>
             </div>
             <div className="animate-fade-in">
-              <img 
+              <img
                 src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="CNM Building"
                 className="rounded-s-full shadow-2xl"
@@ -155,39 +166,49 @@ const Home: React.FC = () => {
       <section className="py-20 bg-cyan-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Dự án nổi bật</h2>
-            <p className="text-xl text-gray-600">Khám phá những dự án đẳng cấp từ CNM</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Dự án nổi bật
+            </h2>
+            <p className="text-xl text-gray-600">
+              Khám phá những dự án đẳng cấp từ CNM
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div 
-                key={project.id} 
+              <div
+                key={project.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.name}
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      project.status === 'Đang mở bán' 
-                        ? 'bg-green-100 text-green-800' 
-                        : 'bg-yellow-100 text-yellow-800'
-                    }`}>
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        project.status === "Đang mở bán"
+                          ? "bg-green-100 text-green-800"
+                          : "bg-yellow-100 text-yellow-800"
+                      }`}
+                    >
                       {project.status}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {project.name}
+                  </h3>
                   <p className="text-gray-600 mb-4">{project.location}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-primary-600">{project.price}</span>
-                    <Link 
+                    <span className="text-2xl font-bold text-primary-600">
+                      {project.price}
+                    </span>
+                    <Link
                       to={`/projects/${project.id}`}
                       className="text-primary-600 hover:text-primary-700 font-semibold flex items-center"
                     >
@@ -201,7 +222,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link 
+            <Link
               to="/projects"
               className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
             >
@@ -216,29 +237,37 @@ const Home: React.FC = () => {
       <section className="py-20 bg-lime-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Tin tức mới nhất</h2>
-            <p className="text-xl text-gray-600">Cập nhật thông tin mới nhất từ CNM</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Tin tức mới nhất
+            </h2>
+            <p className="text-xl text-gray-600">
+              Cập nhật thông tin mới nhất từ CNM
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {news.map((article, index) => (
-              <article 
+              <article
                 key={article.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <img 
-                  src={article.image} 
+                <img
+                  src={article.image}
                   alt={article.title}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <div className="text-sm text-gray-500 mb-2">{article.date}</div>
+                  <div className="text-sm text-gray-500 mb-2">
+                    {article.date}
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {article.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
-                  <Link 
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {article.excerpt}
+                  </p>
+                  <Link
                     to={`/news/${article.id}`}
                     className="text-primary-600 hover:text-primary-700 font-semibold flex items-center"
                   >
@@ -251,7 +280,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link 
+            <Link
               to="/news"
               className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
             >
@@ -268,17 +297,24 @@ const Home: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in-up">
             Sẵn sàng đầu tư cùng CNM?
           </h2>
-          <p className="text-xl text-primary-100 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Liên hệ với chúng tôi ngay hôm nay để nhận tư vấn miễn phí từ các chuyên gia hàng đầu
+          <p
+            className="text-xl text-primary-100 mb-8 animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Liên hệ với chúng tôi ngay hôm nay để nhận tư vấn miễn phí từ các
+            chuyên gia hàng đầu
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <Link 
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <Link
               to="/contact"
               className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
             >
               Đăng ký tư vấn
             </Link>
-            <a 
+            <a
               href="tel:02462583535"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
             >
