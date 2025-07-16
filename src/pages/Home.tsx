@@ -16,20 +16,20 @@ const Home: React.FC = () => {
     },
     {
       id: 2,
-      name: 'CNM Riverside',
-      location: 'Quận 7, TP.HCM',
-      price: '5.000 m²',
+      name: 'Điện Biên Riverside',
+      location: 'Tỉnh Lào Cai',
+      price: '150 - 300 m²',
       image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'Sắp mở bán'
+      status: 'Coming soon'
     },
-    {
-      id: 3,
-      name: 'CNM Garden',
-      location: 'Quận 2, TP.HCM',
-      price: '3.000 m²',
-      image: 'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'Đang mở bán'
-    }
+    // {
+    //   id: 3,
+    //   name: 'CNM Garden',
+    //   location: 'Quận 2, TP.HCM',
+    //   price: '3.000 m²',
+    //   image: 'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   status: 'Đang mở bán'
+    // }
   ];
 
   const news = [

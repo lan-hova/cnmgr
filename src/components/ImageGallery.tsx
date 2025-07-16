@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { Apartment } from '../types/Apartment';
+import { Apartment } from '../types/apartment';
 
 interface ImageGalleryProps {
   apartment: Apartment;

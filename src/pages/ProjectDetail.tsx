@@ -9,7 +9,7 @@ import nest5 from '/src/img/nestia5.jpg';
 import nest6 from '/src/img/nestia6.jpg';
 import nest7 from '/src/img/nestia7.jpg';
 import { useHeader } from '../components/HeaderContext';
-import { Apartment } from '../types/Apartment';
+import { Apartment } from '../types/apartment';
 import ApartmentCard from '../components/ApartmentCard';
 import ImageGallery from '../components/ImageGallery';
 
@@ -24,8 +24,8 @@ const ProjectDetail: React.FC = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   
   // Mock data - in real app, fetch from API
-  const project = {
-    id: Number(id),
+  const projects = [ {
+    id: 1,
     name: 'Nestia - Điện Biên',
     location: 'Tỉnh Lào Cai',
     address: 'Phường Lào Cai, Tỉnh Lào Cai',
@@ -93,7 +93,8 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
       { name: 'Bệnh viện thành phố', distance: '500m', type: '' },
       { name: 'Cầu Cốc Lếu', distance: '1.9km', type: '' }
     ]
-  };
+  }
+]
 
   const groundImg = [
   {
@@ -199,7 +200,14 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
   
   ];
 
+
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  
+  const project = projects.find((p) => p.id === Number(id));
+
+  if (!project) {
+    return <p className="p-48 text-center text-5xl text-green-500">COMING SOON</p>;
+  }
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
@@ -209,8 +217,10 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
     setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
   };
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { setHideHeader } = useHeader();
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       const handleScroll = () => {
         // Check if we should make header sticky

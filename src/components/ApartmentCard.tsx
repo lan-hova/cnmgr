@@ -1,5 +1,5 @@
 import React from 'react';
-import { Apartment } from '../types/Apartment';
+import { Apartment } from '../types/apartment';
 
 interface ApartmentCardProps {
   apartment: Apartment;
