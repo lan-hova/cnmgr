@@ -455,7 +455,7 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                   </div>
                 </div>
               </section>
- 
+
               {/* Product Section */}
               <section
                 id="ground"
@@ -586,14 +586,24 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                 >
                   <div className="grid md:grid-cols-2">
                     {/* Map Side */}
-                    <div className="h-96 md:h-auto bg-gray-200 flex items-center justify-center p-8">
-                      <div className="text-center">
+                    <div className="h-96 md:h-auto bg-green-200 flex items-center justify-center p-2">
+                      {/* <div className="text-center">
                         <MapPin className="w-12 h-12 text-gray-500 mx-auto mb-4" />
-                        <p className="text-gray-600">Bản đồ Google Maps</p>
+                        <p className="text-gray-600">
+                          
+                        </p>
                         <p className="text-sm text-gray-500 mt-2">
                           {project.address}
                         </p>
-                      </div>
+                      </div> */}
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.3824854272148!2d103.96265939999999!3d22.4898283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36cd13823950c325%3A0x85146d2d682225bf!2zNjIzIMSQaeG7h24gQmnDqm4sIER1ecOqbiBI4bqjaSwgTMOgbyBDYWk!5e0!3m2!1svi!2s!4v1752781443242!5m2!1svi!2s"
+                        width="600"
+                        height="300"
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
                     </div>
 
                     {/* Info Side */}
@@ -711,11 +721,11 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                   <div className="text-center space-y-3">
                     <div className="text-sm text-gray-600">Hoặc liên hệ trực tiếp</div>
                     <a 
-                      href="tel:02462583535"
+                      href="tel:0359888912"
                       className="flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-white py-3 rounded-lg font-semibold transition-colors"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      0246 258 3535
+                      0359888912
                     </a>
                     <a 
                       href="mailto:congtycptapdoancnm@gmail.com"
@@ -836,11 +846,11 @@ Nestia – Điện Biên không chỉ là chốn an cư, mà là nơi khởi đ�
                         Hoặc liên hệ trực tiếp
                       </div>
                       <a
-                        href="tel:02462583535"
+                        href="tel:0359888912"
                         className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors"
                       >
                         <Phone className="w-5 h-5 mr-2" />
-                        0246 258 3535
+                        0359888912
                       </a>
                       <a
                         href="mailto:congtycptapdoancnm@gmail.com"

@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
     {
       name: 'Văn phòng chính',
       address: 'Số 2, ngõ 18/61, phố Định Công Thượng, Phường Định Công, Quận Hoàng Mai, TP Hà Nội',
-      phone: '024 6258 3535',
+      phone: '0359888912',
       email: 'congtycptapdoancnm@gmail.com',
       hours: 'T2-T6: 8:30-17:30, T7: 9:00-12:00'
     },
@@ -181,13 +181,13 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-bold mb-4">Liên hệ nhanh</h3>
                 <div className="space-y-4">
                   <a
-                    href="tel:02462583535"
+                    href="tel:0359888912"
                     className="flex items-center p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                   >
                     <Phone className="w-5 h-5 mr-3" />
                     <div>
                       <div className="font-medium">Hotline 24/7</div>
-                      <div className="text-sm opacity-90">024 6258 3535</div>
+                      <div className="text-sm opacity-90">0359888912</div>
                     </div>
                   </a>
                   <a

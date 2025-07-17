@@ -544,7 +544,7 @@ const About: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Điện thoại</h3>
               <p className="text-gray-600">
-                Hotline: 024 6258 3535<br />
+                Hotline: 0359888912<br />
                 
               </p>
             </div>

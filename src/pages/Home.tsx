@@ -315,10 +315,10 @@ const Home: React.FC = () => {
               Đăng ký tư vấn
             </Link>
             <a
-              href="tel:02462583535"
+              href="tel:0359888912"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
             >
-              Gọi ngay: 024 6258 3535
+              Gọi ngay: 0359888912
             </a>
           </div>
         </div>
